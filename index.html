@@ -1,55 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-<style>code, pre, p { font-family: "Courier New", monospace !important; } .math { display: none; } .MathJax { display: none !important; }</style>
-  <title>rpn_manual.nim</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🐳</text></svg>">
+  <title>nimib document</title>
+  
   <meta content="text/html; charset=utf-8" http-equiv="content-type">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="nimib 0.3.12" name="generator">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css">
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/pietroppeter/nimib/assets/atom-one-light.css'>
-    <script src="https://cdn.jsdelivr.net/gh/pietroppeter/nimib@main/assets/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-
-  <style>
-.nb-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nb-small {
-  font-size: 0.8rem;
-}
-button.nb-small {
-  float: right;
-  padding: 2px;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-section#source {
-  display:none
-}
-pre > code {
-  font-size: 1.2em;
-}
-.nb-output {
-  line-height: 1.15;
-}
-figure {
-  margin: 2rem 0;
-}
-figcaption {
-  text-align: center;
-}
+  <meta content="nimib " name="generator">
   
-</style>
+  
+    
+  
   
 </head>
 <body>
 <header>
 <div class="nb-box">
-  <span><a href=".">🏡</a></span>
+  <span><a href="">🏡</a></span>
   <span><code>rpn_manual.nim</code></span>
   <span></span>
 </div>
@@ -143,122 +109,7 @@ rpn_manual.html
 </div>
 </footer>
 <section id="source">
-<pre><code class="nohighlight nim hljs">
-<span class="hljs-keyword">import</span> nimib
-
-nbInit
-nbDoc.context[<span class="hljs-string">&quot;use_math&quot;</span>] = <span class="hljs-string">&quot;false&quot;</span>
-
-nbText: <span class="hljs-string">&quot;&quot;&quot;
-RPN 计算器使用说明书
-
-一、安装与编译指南
-
-1 安装 nim 编译器
-
-curl https://nim-lang.org/choosenim/init.sh -sSf | sh
-
-echo export PATH=$HOME/.nimble/bin:$PATH &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
-
-2 安装 nimib
-
-nimble install nimib
-
-3 编译 C++ 程序
-
-g++ rpn_calc.cpp -o rpn_calc
-
-4 生成 HTML
-
-nim r rpn_manual.nim
-
-输出文件 rpn_manual.html 与源文件同目录
-
-二、基本使用示例
-
-启动程序后逐行输入表达式 以空格分隔 按回车计算
-
-&gt; 5 5 + 3 *
-
-结果: 30
-
-栈: 30 
-
-三、所有支持的操作说明
-
-加法: 符号 +, 栈深度 2
-
-减法: 符号 -, 栈深度 2  
-
-乘法: 符号 *, 栈深度 2
-
-除法: 符号 /, 栈深度 2
-
-退出: 符号 q, 栈深度 0
-
-浮点数与整数均可接受,例 3 或 3.14
-
-四、错误代码和异常说明
-
-1 除零错误
-
-&gt; 5 0 /
-
-错误  Divide by zero
-
-2 栈空错误
-
-&gt; *
-
-错误  Stack underflow
-
-3 非法操作符
-
-&gt; 1 2 abc +
-
-错误  Unknown operator: abc
-
-五、示例输入输出
-
-RPN 计算器（例: 5 5 + 3 *） 输入 q 退出
-
-&gt; 1 2 + 3 + 7 7 * +
-
-结果: 55
-
-栈: 55 
-
-&gt; 5 0 /
-
-错误  Divide by zero
-
-&gt; *
-
-错误  Stack underflow
-
-&gt; 1 2 3 -
-
-结果: -1
-
-栈: -1 1 
-
-&gt; 1 2 abc +
-
-错误  Unknown operator: abc
-
-&gt; 5 5 + 3 *
-
-结果: 30
-
-栈: 30 
-
-&gt; q
-&quot;&quot;&quot;</span>
-
-nbRawHtml: <span class="hljs-string">&quot;rpn_manual.html&quot;</span>
-nbSave
-
-</code></pre>
+<pre><code class="nohighlight nim hljs"></code></pre>
 </section><script>
 function toggleSourceDisplay() {
   var btn = document.getElementById("show")
