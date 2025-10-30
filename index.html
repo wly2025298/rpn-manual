@@ -59,12 +59,12 @@ figcaption {
 <p>1 安装 nim 编译器</p>
 <p>curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 echo export PATH=$HOME/.nimble/bin:$PATH &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc</p>
-<p>2 安装 nimib
-nimble install nimib</p>
-<p>3 编译 C++ 程序
-g++ rpn_calc.cpp -o rpn_calc</p>
-<p>4 生成 HTML
-nim r rpn_manual.nim</p>
+<p>2 安装 nimib</p>
+<p>nimble install nimib</p>
+<p>3 编译 C++ 程序</p>
+<p>g++ rpn_calc.cpp -o rpn_calc</p>
+<p>4 生成 HTML</p>
+<p>nim r rpn_manual.nim</p>
 <p>输出文件 rpn_manual.html 与源文件同目录</p>
 <p>二、基本使用示例</p>
 <p>启动程序后逐行输入表达式 以空格分隔 按回车计算</p>
@@ -74,18 +74,18 @@ nim r rpn_manual.nim</p>
 <p>结果: 30</p>
 <p>栈: 30</p>
 <p>三、所有支持的操作说明</p>
-<p>加法: 符号 +, 栈深度 2
-减法: 符号 -, 栈深度 2<br />
-乘法: 符号 *, 栈深度 2
-除法: 符号 /, 栈深度 2
-退出: 符号 q, 栈深度 0</p>
+<p>加法: 符号 +, 栈深度 2</p>
+<p>减法: 符号 -, 栈深度 2</p>
+<p>乘法: 符号 *, 栈深度 2</p>
+<p>除法: 符号 /, 栈深度 2</p>
+<p>退出: 符号 q, 栈深度 0</p>
 <p>浮点数与整数均可接受,例 3 或 3.14</p>
 <p>四、错误代码和异常说明</p>
 <p>1 除零错误</p>
 <blockquote>
-<p>5 0 /
-[错误] Divide by zero</p>
+<p>5 0 /</p>
 </blockquote>
+<p>[错误] Divide by zero</p>
 <p>2 栈空错误</p>
 <blockquote>
 <ul>
@@ -95,20 +95,20 @@ nim r rpn_manual.nim</p>
 <p>[错误] Stack underflow</p>
 <p>3 非法操作符</p>
 <blockquote>
-<p>1 2 abc +
-[错误] Unknown operator: abc</p>
+<p>1 2 abc +</p>
 </blockquote>
+<p>[错误] Unknown operator: abc</p>
 <p>五、示例输入输出</p>
 <p>RPN 计算器（例: 5 5 + 3 *） 输入 q 退出</p>
 <blockquote>
-<p>1 2 + 3 + 7 7 * +
-结果: 55
-栈: 55</p>
+<p>1 2 + 3 + 7 7 * +</p>
 </blockquote>
+<p>结果: 55</p>
+<p>栈: 55</p>
 <blockquote>
-<p>5 0 /
-[错误] Divide by zero</p>
+<p>5 0 /</p>
 </blockquote>
+<p>[错误] Divide by zero</p>
 <blockquote>
 <ul>
 <li></li>
@@ -116,19 +116,19 @@ nim r rpn_manual.nim</p>
 </blockquote>
 <p>[错误] Stack underflow</p>
 <blockquote>
-<p>1 2 3 -
-结果: -1
-栈: -1 1</p>
+<p>1 2 3 -</p>
 </blockquote>
+<p>结果: -1</p>
+<p>栈: -1 1</p>
 <blockquote>
-<p>1 2 abc +
-[错误] Unknown operator: abc</p>
+<p>1 2 abc +</p>
 </blockquote>
+<p>[错误] Unknown operator: abc</p>
 <blockquote>
-<p>5 5 + 3 *
-结果: 30
-栈: 30</p>
+<p>5 5 + 3 *</p>
 </blockquote>
+<p>结果: 30</p>
+<p>栈: 30</p>
 <blockquote>
 <p>q</p>
 </blockquote>
@@ -142,7 +142,8 @@ rpn_manual.html
 </div>
 </footer>
 <section id="source">
-<pre><code class="nohighlight nim hljs"><span class="hljs-keyword">import</span> nimib
+<pre><code class="nohighlight nim hljs">
+<span class="hljs-keyword">import</span> nimib
 
 nbInit
 
@@ -156,15 +157,16 @@ RPN 计算器使用说明书
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 echo export PATH=$HOME/.nimble/bin:$PATH &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
 
-
 2 安装 nimib
+
 nimble install nimib
 
-
 3 编译 C++ 程序
+
 g++ rpn_calc.cpp -o rpn_calc
 
 4 生成 HTML
+
 nim r rpn_manual.nim
 
 输出文件 rpn_manual.html 与源文件同目录
@@ -182,9 +184,13 @@ nim r rpn_manual.nim
 三、所有支持的操作说明
 
 加法: 符号 +, 栈深度 2
+
 减法: 符号 -, 栈深度 2  
+
 乘法: 符号 *, 栈深度 2
+
 除法: 符号 /, 栈深度 2
+
 退出: 符号 q, 栈深度 0
 
 浮点数与整数均可接受,例 3 或 3.14
@@ -192,15 +198,21 @@ nim r rpn_manual.nim
 四、错误代码和异常说明
 
 1 除零错误
+
 &gt; 5 0 /
+
 [错误] Divide by zero
 
 2 栈空错误
+
 &gt; +
+
 [错误] Stack underflow
 
 3 非法操作符
+
 &gt; 1 2 abc +
+
 [错误] Unknown operator: abc
 
 五、示例输入输出
@@ -208,24 +220,33 @@ nim r rpn_manual.nim
 RPN 计算器（例: 5 5 + 3 *） 输入 q 退出
 
 &gt; 1 2 + 3 + 7 7 * +
+
 结果: 55
+
 栈: 55 
 
 &gt; 5 0 /
+
 [错误] Divide by zero
 
 &gt; +
+
 [错误] Stack underflow
 
 &gt; 1 2 3 -
+
 结果: -1
+
 栈: -1 1 
 
 &gt; 1 2 abc +
+
 [错误] Unknown operator: abc
 
 &gt; 5 5 + 3 *
+
 结果: 30
+
 栈: 30 
 
 &gt; q
@@ -234,7 +255,6 @@ RPN 计算器（例: 5 5 + 3 *） 输入 q 退出
 nbRawHtml: <span class="hljs-string">&quot;rpn_manual.html&quot;</span>
 nbSave
 
-  
 </code></pre>
 </section><script>
 function toggleSourceDisplay() {
