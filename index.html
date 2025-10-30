@@ -56,8 +56,8 @@ figcaption {
 </header><main>
 <p>RPN 计算器使用说明书</p>
 <p>一、安装与编译指南</p>
-<p>1 安装 nim 编译器
-curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+<p>1 安装 nim 编译器</p>
+<p>curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 echo export PATH=$HOME/.nimble/bin:$PATH &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc</p>
 <p>2 安装 nimib
 nimble install nimib</p>
@@ -69,19 +69,19 @@ nim r rpn_manual.nim</p>
 <p>二、基本使用示例</p>
 <p>启动程序后逐行输入表达式 以空格分隔 按回车计算</p>
 <blockquote>
-<p>5 5 + 3 *
-结果: 30
-栈: 30</p>
+<p>5 5 + 3 *</p>
 </blockquote>
-<p>三、所有支持的操作说明
-加法: 符号 +, 栈深度 2
+<p>结果: 30</p>
+<p>栈: 30</p>
+<p>三、所有支持的操作说明</p>
+<p>加法: 符号 +, 栈深度 2
 减法: 符号 -, 栈深度 2<br />
 乘法: 符号 *, 栈深度 2
 除法: 符号 /, 栈深度 2
 退出: 符号 q, 栈深度 0</p>
 <p>浮点数与整数均可接受,例 3 或 3.14</p>
-<p>四、错误代码和异常说明
-1 除零错误</p>
+<p>四、错误代码和异常说明</p>
+<p>1 除零错误</p>
 <blockquote>
 <p>5 0 /
 [错误] Divide by zero</p>
@@ -98,8 +98,8 @@ nim r rpn_manual.nim</p>
 <p>1 2 abc +
 [错误] Unknown operator: abc</p>
 </blockquote>
-<p>五、示例输入输出
-RPN 计算器（例: 5 5 + 3 *） 输入 q 退出</p>
+<p>五、示例输入输出</p>
+<p>RPN 计算器（例: 5 5 + 3 *） 输入 q 退出</p>
 <blockquote>
 <p>1 2 + 3 + 7 7 * +
 结果: 55
@@ -152,6 +152,7 @@ RPN 计算器使用说明书
 一、安装与编译指南
 
 1 安装 nim 编译器
+
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 echo export PATH=$HOME/.nimble/bin:$PATH &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
 
@@ -173,10 +174,13 @@ nim r rpn_manual.nim
 启动程序后逐行输入表达式 以空格分隔 按回车计算
 
 &gt; 5 5 + 3 *
+
 结果: 30
+
 栈: 30 
 
 三、所有支持的操作说明
+
 加法: 符号 +, 栈深度 2
 减法: 符号 -, 栈深度 2  
 乘法: 符号 *, 栈深度 2
@@ -186,6 +190,7 @@ nim r rpn_manual.nim
 浮点数与整数均可接受,例 3 或 3.14
 
 四、错误代码和异常说明
+
 1 除零错误
 &gt; 5 0 /
 [错误] Divide by zero
@@ -199,6 +204,7 @@ nim r rpn_manual.nim
 [错误] Unknown operator: abc
 
 五、示例输入输出
+
 RPN 计算器（例: 5 5 + 3 *） 输入 q 退出
 
 &gt; 1 2 + 3 + 7 7 * +
