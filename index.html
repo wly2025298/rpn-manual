@@ -87,12 +87,9 @@ figcaption {
 </blockquote>
 <p>错误  Divide by zero</p>
 <p>2 栈空错误</p>
-<blockquote>
-<ul>
-<li></li>
-</ul>
-</blockquote>
-<p>错误  Stack underflow</p>
+<p>nbCodeSkip:</p>
+<p>echo &quot;+&quot;</p>
+<p>echo &quot;错误 Stack underflow&quot;</p>
 <p>3 非法操作符</p>
 <blockquote>
 <p>1 2 abc +</p>
@@ -107,12 +104,6 @@ figcaption {
 <p>栈: 55</p>
 <blockquote>
 <p>5 0 /</p>
-</blockquote>
-<p>错误  Divide by zero</p>
-<blockquote>
-<ul>
-<li></li>
-</ul>
 </blockquote>
 <p>错误  Stack underflow</p>
 <blockquote>
@@ -207,9 +198,11 @@ nim r rpn_manual.nim
 
 2 栈空错误
 
-&gt;+
+nbCodeSkip:
 
-错误  Stack underflow
+echo &quot;+&quot;
+
+echo &quot;错误 Stack underflow&quot;
 
 3 非法操作符
 
@@ -228,10 +221,6 @@ RPN 计算器（例: 5 5 + 3 *） 输入 q 退出
 栈: 55 
 
 &gt; 5 0 /
-
-错误  Divide by zero
-
-&gt;+
 
 错误  Stack underflow
 
